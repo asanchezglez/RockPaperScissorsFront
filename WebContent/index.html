@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link
+	href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial"
+	rel="stylesheet" />
+<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css" type="text/css"/>
+
+
+
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+<script src="js/rps.js"></script>
+
+</head>
+<body>
+	<div id="header-wrapper">
+		<div id="banner" class="container">
+			<img src="images/rps.png" height="200" alt="" />
+		</div>
+		<div id="header" class="container">
+			<div id="logo">
+				<h1>
+					<a href="#">Rock, Paper, Scissors</a>
+				</h1>
+
+			</div>
+			<div id="menu">
+				<ul>
+					<li class="current_page_item"><a id="showStatistics"
+						title="">Statistics</a></li>
+
+				</ul>
+				<ul>
+					<li><a id="setUrl"
+						title=""><img src="images/config.png" height="30" alt="" /></a></li>
+
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div id="page-wrapper">
+		<div id="page" class="container">
+			<div id="content">
+
+
+				<div id="chooseOpponent">
+					<div class="title">
+						<h2>Choose your opponent</h2>
+					</div>
+					<p>Select your opponent between these two</p>
+					<div id="two-column">
+						<div class="box1">
+
+							<div id="rockPlayer" class="selectImage">
+								<h3>Rockman</h3>
+								<img src="images/rockman.png" height="200px" alt="" />
+							</div>
+
+						</div>
+						<div class="box2">
+
+							<div id="randomPlayer" class="selectImage">
+								<h3>Randomgirl</h3>
+								<img src="images/randomgirl.png" height="200px" alt="" />
+							</div>
+
+						</div>
+						<div>
+							<center> <a id="createGameButton"
+								style="margin-left: 10px;" href=""
+								class="button button-small button-disabled">Accept</a></center>
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+				<!-- 2. PlayGround -->
+				<div id="playground" style="display: none">
+					<div id="three-column" class="container">
+						<div id="tbox1">
+							<div class="title">
+								<h2>Select your hand</h2>
+							</div>
+							<div id="selectHand">
+								<center>
+								<div id="ROCK" class="selectImage prsIcon rockIcon"></div>
+								</center>
+								<center>
+								<div id="PAPER" class="selectImage prsIcon paperIcon"></div>
+								</center>
+								<center>
+								<div id="SCISSORS" class="selectImage prsIcon scissorsIcon">
+								</div>
+								</center>
+							</div>
+
+						</div>
+						<div id="tbox2">
+							<a id="playRoundButton" class="button button-disabled"
+								style="margin-bottom: 50px">Play Round</a>
+							<div id="roundResult">
+								<!--  
+								 <div class="win"> WIN </div>
+								 <div class="loss"> LOSS </div>
+								 -->
+							</div>
+						</div>
+
+
+
+						<div id="roundResult"></div>
+						<div id="tbox3">
+							<h2>Opponent</h2>
+							<div id="opponentBox">
+								<div id="opponentDetails">
+									<h3>Rockman</h3>
+									<img src="images/rockman.png" height="200px" alt="" />
+								</div>
+								<br />
+								<h3>Hand</h3>
+								<center>
+								<div id="opponentHand" class="prsIcon"></div>
+								<!--  class="prsIcon paperIcon" --> </center>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div id="resultTable" style="display:none">
+					<div id="wrapper2">
+						<div class="container">
+						<a id="restartButton" class="button" style="margin-bottom: 50px">Restart</a>
+								<br/>
+							<center>
+								<h3>Results</h3>
+							
+							<table class="rps-table">
+								<thead>
+									<tr>
+										<th>Player 1</th>
+										<th>Player 2</th>
+										<th>Result</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<div style="display:none">
+		<div id="dialog" title="General Statistics">
+		  <ul class="default">
+					<li>Total Rounds: <div id="statisticsRounds"></div></li>
+					<li>Player 1 Wins: <div id="statisticPlayer1Wins"></div></li>
+					<li>Player 2 Wins: <div id="statisticPlayer2Wins"></div></li>
+					<li>Draws: <div id="statisticDraws"></div></li>
+					</ul>
+		</div>
+	</div>
+	<div style="display:none">
+		<div id="setUrlDialog" title="Set URL">
+		  <ul class="default">
+					<li><input id="serviceUrl" type="text"></input></li>
+					<li><center> <a id="acceptUrl"
+								style="margin-left: 10px;" href=""
+								class="button button-small">Accept</a></center></li>
+					</ul>
+		</div>
+	</div>
+</body>
+</html>
